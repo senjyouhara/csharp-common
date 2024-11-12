@@ -110,7 +110,8 @@
                         <Border x:Name="TrackBackground"
                                 Grid.Row="1"
                                 Height="{DynamicResource Slider.Height}"
-                                Background="{TemplateBinding Background}" />
+                                Background="{TemplateBinding Background}" >
+                        </Border>
                         <Track x:Name="PART_Track" Grid.Row="1">
                             <Track.DecreaseRepeatButton>
                                 <RepeatButton Style="{StaticResource DefaultLeftRepeatButtonStyle}"
@@ -132,6 +133,9 @@
                                  Fill="{TemplateBinding Foreground}" />
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="Border.IsMouseOver" Value="True">
+                            <Setter TargetName="TrackBackground" Property="Border.Background" Value="{DynamicResource Slider.Background.Hover}" />
+                        </Trigger>
                         <Trigger Property="TickPlacement" Value="Both">
                             <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
                             <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
