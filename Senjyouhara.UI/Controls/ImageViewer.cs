@@ -17,7 +17,6 @@ using HandyControl.Interactivity;
 using HandyControl.Properties.Langs;
 using HandyControl.Tools;
 using Microsoft.Win32;
-using Senjyouhara.Common.Base;
 
 namespace Senjyouhara.UI.Controls;
 
